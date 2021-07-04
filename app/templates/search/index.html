@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marketvault</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/stylesheet.css') }}" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light ">
+			<a class="navbar-brand" style="width: 80%"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""/></a>
+			 <form id="search-f" class="form-inline mr-auto">
+				<div class="search-spice">
+						<input id="main-srch" type="text" class="search-control" placeholder='Try typing "Fidget Spinner"'/>
+						<span class="clear-box"><input id="reset-btn" type="reset" value="" alt="clear">&times;</span>
+						<span class="srch-icon" style="display:none;"><svg width="30px" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span>
+						<button class="search-btn">
+							<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+						</button>
+				</div>
+                <div class="dropdown-menu inner list_search" role="listbox" aria-expanded="true">
+                </div>
+				<!--<div class="dropdown-menu inner list_search" role="listbox" aria-expanded="true">
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+					<a tabindex="0" class="dropdown-item" data-original-index="1">grey or grey</a>
+				</div>-->
+			</form>
+		</nav>
+    </header>
+      <main class="container-fluid">
+		 <div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2 left-filter">
+					<div class="col-12 p-0">
+						<h6 class="location_gen">2,375 results <span style="color: #999cb4">in 2.36s</span></h6>
+						<div class="card card-filter">
+							<h6 class="mt-3">Revenues</h6>
+							<ol class="list-inline filter-list">
+								<li><input name="test" type="radio"/><label>Up to $25</label></li>
+								<li><input name="test" type="radio"/><label>$25 - $90</label></li>
+								<li><input name="test" type="radio"/><label>$90 - $150</label></li>
+								<li><input name="test" type="radio"/><label>Over $150</label></li>
+							</ol>
+							<form class="range-form">
+								<div class="filter-range w-100 d-flex">
+									<label>$ <input class="w-100" type="text" name=""/></label><span>to</span><label>$ <input  class="w-100"  type="text" name=""/></label>
+									<button class="go-btn">Go</button>
+								</div>
+							</form>
+						</div>
+						<div class="card card-filter">
+							<h6 class="mt-3">Daily Users</h6>
+							<ol class="list-inline filter-list">
+								<li><input name="test" type="radio"/><label>Up to 1K</label></li>
+								<li><input name="test" type="radio"/><label>1K- 10K</label></li>
+								<li><input name="test" type="radio"/><label>10K - 500K</label></li>
+								<li><input name="test" type="radio"/><label>Over 500K</label></li>
+							</ol>
+							<form class="range-form">
+								<div class="filter-range w-100 d-flex">
+									<label>$ <input class="w-100" type="text" name=""/></label><span>to</span><label>$ <input  class="w-100"  type="text" name=""/></label>
+									<button class="go-btn">Go</button>
+								</div>
+							</form>
+						</div>
+						<div class="card card-filter">
+							<h6 class="mt-3">Category</h6>
+							<ol class="list-inline filter-list">
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">All categories</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Arts, Crafts & Sewing</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Automotive</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Baby</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Beauty</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Books</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">CDs & Vinyl</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Cell Phones & Accessories</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Clothing, Shoes & Jewelry</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Electronics</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Entertainment</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Grocery & Gourmet Food</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Health & Personal Care</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Home & Kitchen</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Industrial & Scientific</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Movies & TV</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Musical Instruments</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Office Products</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Patio, Lawn & Garden</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Pet Supplies</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Sports & Outdoors</span></label></li>
+								<li><input name="test2" type="radio"/><label class="label-sidebar-wrapper"><span class="label-sidebar">Tools & Home Improvement</span></label></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div id="products" class="row view-group">
+                        {% for store in stores %}
+						<div class="item col-xs-4 col-lg-4 list-group-item">
+							<div class="thumbnail card">
+								<div class="img-event">
+									 <a href="#" class="item-link"><img class="group list-group-image img-fluid" src="https://marketvault-bucket.s3.ca-central-1.amazonaws.com/screenshots/{{ store.url }}.png" alt=""></a>
+								</div>
+								<div class="caption card-body">
+									<h4 class="group card-title inner list-group-item-heading">
+										<a href="#">{{ store.title }}</a>
+									</h4>
+									<div class="pricemade">
+										<div class="left-pt">
+											<a href="#" class="brand-link">{{ store.url }}</a>
+										</div>
+										<div class="right-pt text-right">
+											<a href="#"><img src="images/link-ico.png"/></a>
+										</div>
+									</div>
+									<p class="group inner item-info list-group-item-text">{{ store.description }}</p>
+									<div>
+										<div class="store-data">
+											<div class="store-data-title">
+												Alexa Rank
+											</div>
+											<div class="store-data-main-el">
+												{{ store.alexa_rank }} <!--<span class="store-data-sub-el">$/yr</span>-->
+											</div>
+										</div>
+										<div class="store-data">
+											<div class="store-data-title">
+												Traffic
+											</div>
+											<div class="store-data-main-el">
+												{{ store.daily_visitors }} <span class="store-data-sub-el">users/day</span>
+											</div>
+										</div>
+										<div class="store-data">
+											<div class="store-data-title">
+												Average Prices
+											</div>
+											<div class="store-data-main-el">
+												{{ store.average_product_price }} <span class="store-data-sub-el">$</span>
+											</div>
+										</div>
+									</div>
+								</div>
+						   </div>
+						</div><!-- ITEM-ENDS-HERE -->
+                        {% endfor %}
+                        <div class="col-md-12 paging">
+							<nav aria-label="Page navigation example">
+							  <ul class="pagination justify-content-left">
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item">
+								  <a class="page-link" href="#">Next</a>
+								</li>
+							  </ul>
+							</nav>
+						</div>
+					 </div>
+				</div>
+			</div>
+		 </div>
+      </main>
+	  <div class="back-top" title="Top of Page"><span class="arrow"></span></div>
+      <script>
+        $('#search-input').on('input', function () {
+            if ($(this).val().length > 0) {
+                // Query stores...
+                req = $.ajax({
+                    url: "/webhook/get/stores?search=" + $(this).val() + "&page=1",
+                    beforeSend: function () {
+                        $('#stores-loading-gif').show()
+                    },
+                    complete: function () {
+                        $('#stores-loading-gif').hide()
+                    },
+                    type: 'GET',
+                    success: function (data) {
+                        let res = data.results.slice(0, 5);
+                        let i = 0;
+                        $('#seach-activated-stores').empty();
+                        $.each(res, function (index, item) {
+                            $('#seach-activated-stores').append(
+                                "                        <div class=\"random-stores-item\">\n" +
+                                "                            <div style=\"float:left; width:5%\">\n" +
+                                "                                <img src=\"https://www.google.com/s2/favicons?domain=" + item.text + "\" style=\"border:1px solid rgba(0,0,0,.3);\n" +
+                                "                                        width:22px; height:22px\">\n" +
+                                "                            </div>\n" +
+                                "                            <a href=\"/stores/" + item.id + "\"><span style=\"color:#0288d1; font-weight:500; font:Roboto,helvetica neue,sans-serif\">" + item.text + "</span></a>\n" +
+                                "                     	 </div>"
+                            );
+                            i += 1;
+                        });
+                    }
+                });
+            }
+        })
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+   </body>
+</html>
+
